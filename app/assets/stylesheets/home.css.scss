@@ -1,3 +1,15 @@
 // Place all the styles related to the Home controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+#top-link-block.affix-top {
+  position: absolute; /* allows it to "slide" up into view */
+  bottom: -82px;
+  right: 10px;
+}
+
+#top-link-block.affix {
+  position: fixed; /* keeps it on the bottom once in view */
+  bottom: 18px;
+  right: 10px;
+}

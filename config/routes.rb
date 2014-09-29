@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'home/page_top'
+
   devise_for :users
   get 'home/index'
 
