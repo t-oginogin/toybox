@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'home/dateselect'
+
   get 'home/page_top'
 
   devise_for :users

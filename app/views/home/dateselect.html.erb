@@ -1,0 +1,10 @@
+<H3>dateselectにbootstrapを適用する</H3>
+
+<div class="row">
+  <div class="col-md-2">
+    <%== sprintf(date_select('sample[date]', '', {use_month_numbers: true, start_year: (Date.today.years_ago 10).year, end_year: Date.today.year, discard_day: true, date_separator: '%s'}, {class: "form-control"}), '年') + '月' %>
+  </div>
+  <div class="col-md-3">
+    <%== sprintf(date_select('sample[date]', '', {use_month_numbers: true, start_year: (Date.today.years_ago 10).year, end_year: Date.today.year, discard_day: false, date_separator: '%s'}, {class: "form-control"}), '年', '月') + '日' %>
+  </div>
+</div>

@@ -4,4 +4,7 @@ class HomeController < ApplicationController
 
   def page_top
   end
+
+  def dateselect
+  end
 end
