@@ -10,8 +10,15 @@
   <header class="navbar navbar-default" role="navigation">
     <div class="container">
       <div class="navbar-header">
-        <%= link_to 'Toybox', root_path, class: 'navbar-brand' %>
       </div>
+    </div>
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li><%= link_to 'Toybox', root_path, class: 'navbar-brand' %></li>
+        <% if user_signed_in? %>
+        <li class="pull-right"><%= link_to "", destroy_user_session_path, :method => :delete, class: "glyphicon glyphicon-log-out" %></li>
+        <% end %>
+      </ul>
     </div>
   </header>
 
