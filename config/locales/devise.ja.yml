@@ -98,3 +98,12 @@ ja:
 #        one: "1 error prohibited this %{resource} from being saved:"
         other: "%{count} つのエラーにより %{resource} は保存されませんでした:"
 #        other: "%{count} errors prohibited this %{resource} from being saved:"
+
+  activerecord:
+    attributes:
+      user:
+        username: 'ユーザー名'
+        password: 'パスワード'
+        password_confirmation: 'パスワード(確認用)'
+        current_password: '現在のパスワード'
+        email: 'E-mail'
