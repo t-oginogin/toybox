@@ -7,4 +7,7 @@ class HomeController < ApplicationController
 
   def dateselect
   end
+
+  def calendar
+  end
 end
