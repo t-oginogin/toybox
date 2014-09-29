@@ -102,6 +102,7 @@ ja:
   activerecord:
     attributes:
       user:
+        login_id: 'ログインID'
         username: 'ユーザー名'
         password: 'パスワード'
         password_confirmation: 'パスワード(確認用)'
