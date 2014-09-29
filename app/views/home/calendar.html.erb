@@ -1,11 +1,25 @@
 <H3>カレンダーを使って日付を入力する</H3>
 
-<div class="col-md-2">
-  <div class="form-group">
-    <div class='input-group date' id='datetimepicker1'>
-      <input type='text' name='sample[date]'class="form-control" data-date-format="YYYY/MM/DD"/>
-      <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span>
-      </span>
+<div class="row">
+  <div class="col-md-2">
+    Gem利用
+  </div>
+  <div class="col-md-2">
+    <div class="form-group">
+      <div class='input-group date' id='datetimepicker1'>
+        <input type='text' name='sample[date]'class="form-control" data-date-format="YYYY/MM/DD"/>
+        <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span>
+        </span>
+      </div>
     </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-2">
+    date_field利用
+  </div>
+  <div class="col-md-2">
+    <%= date_field_tag '日付' %>
   </div>
 </div>
