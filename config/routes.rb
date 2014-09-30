@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  get 'books/index_ajax'
+
+  get 'books/search_ajax'
+
   get 'books/index'
 
   get 'books/search'

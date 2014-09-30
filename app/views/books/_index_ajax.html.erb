@@ -1,0 +1,24 @@
+<H3>検索結果</H3>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>No</th>
+      <th>title</th>
+      <th>author</th>
+      <th>publisher</th>
+      <th>isbn</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% (@books || []).each_with_index do |book, index| %>
+      <tr>
+        <td><%= "#{index + 1}" %></td>
+        <td><%= book.title %></td>
+        <td><%= book.author %></td>
+        <td><%= book.publisher %></td>
+        <td><%= book.isbn %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
