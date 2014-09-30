@@ -10,4 +10,8 @@ class HomeController < ApplicationController
 
   def calendar
   end
+
+  def button_param
+    @sample_data = params[:sample_data]
+  end
 end

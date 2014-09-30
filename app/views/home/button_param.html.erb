@@ -1,0 +1,5 @@
+<H3>ボタンクリック時にパラメータを渡す</H3>
+
+<%= link_to 'パラメータ渡す', home_button_param_path(sample_data: 'abc'), method: :get, class: "btn btn-primary" %>
+
+パラメータ：<%= @sample_data %>

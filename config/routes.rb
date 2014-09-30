@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'home/button_param'
+
   get 'home/calendar'
 
   get 'home/dateselect'
