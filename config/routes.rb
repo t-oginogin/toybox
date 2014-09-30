@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  get 'books/index'
+
+  get 'books/search'
+
   get 'home/button_param'
 
   get 'home/calendar'
