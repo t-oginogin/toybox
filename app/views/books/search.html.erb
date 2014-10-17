@@ -1,6 +1,6 @@
 <H3>検索フォームオブジェクトで検索条件を受け取る</H3>
 
-<%= form_for @book_search_form, url: books_index_path, method: :get do |f| %>
+<%= form_for @book_search_form, url: books_path, method: :get do |f| %>
   <% if @book_search_form.errors.any? %>
     <div id="error_explanation">
       <div class="alert alert-danger">

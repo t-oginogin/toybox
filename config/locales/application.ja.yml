@@ -1,0 +1,17 @@
+ja:
+  activerecord:
+    models:
+      book: 本
+    attributes:
+      book:
+        title: タイトル
+        author: 著者
+        publisher: 出版社
+        isbn: ISBN
+  messages:
+    show: 表示
+    edit: 編集
+    delete: 削除
+    back: 戻る
+    new_book: 新規作成
+    created_book: 新しく本を作成しました。

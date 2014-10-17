@@ -1,11 +1,8 @@
 Rails.application.routes.draw do
   get 'books/index_ajax'
-
   get 'books/search_ajax'
-
-  get 'books/index'
-
   get 'books/search'
+  resources :books, only: [:index, :new, :create, :show]
 
   get 'home/button_param'
 
