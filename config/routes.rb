@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  get 'home/file_upload'
+  post 'home/upload'
+
   get 'books/index_ajax'
   get 'books/search_ajax'
   get 'books/search'

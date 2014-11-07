@@ -1,0 +1,20 @@
+<h1>ファイルアップロード</h1>
+
+<div>
+  <%= form_tag home_upload_path, :method => :post, :multipart => true do %>
+    <div class="row">
+      <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+        <%= file_field_tag 'uploads[]', class: "filestyle", :multiple => true %>
+      </div>
+      <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1">
+        <%= submit_tag 'Add Files', class: "btn btn-primary" %>
+      </div>
+    </div>
+  <% end %>
+</div>
+
+<div>
+  <% (@filenames || []).each do |f| %>
+    file: <%= f %><br/>
+  <% end %>
+</div>
