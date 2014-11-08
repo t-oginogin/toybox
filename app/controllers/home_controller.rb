@@ -19,7 +19,10 @@ class HomeController < ApplicationController
   end
 
   def upload
+    work_path = 'tmp/files'
+    FileUtils.mkdir_p(work_path) unless FileTest.exist?(work_path)
     @filenames = (params[:uploads] || []).each_with_object([]) do |file, files|
+      FileUtils.cp file.tempfile, "#{work_path}/#{file.original_filename}"
       files << file.original_filename
     end
 
