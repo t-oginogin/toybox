@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'home/download'
+
   get 'home/file_upload'
   post 'home/upload'
 

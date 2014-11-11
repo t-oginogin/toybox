@@ -28,4 +28,11 @@ class HomeController < ApplicationController
 
     render :file_upload
   end
+
+  def download
+    work_path = 'tmp/files'
+    render :file_upload and return if params[:file_name].blank?
+
+    send_file "#{work_path}/#{params[:file_name]}"
+  end
 end

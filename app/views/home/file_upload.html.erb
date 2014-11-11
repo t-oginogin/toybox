@@ -1,4 +1,4 @@
-<h1>ファイルアップロード</h1>
+<h1>ファイルアップロード/ダウンロード</h1>
 
 <div>
   <%= form_tag home_upload_path, :method => :post, :multipart => true do %>
@@ -13,8 +13,10 @@
   <% end %>
 </div>
 
+<hr/>
+
 <div>
   <% (@filenames || []).each do |f| %>
-    file: <%= f %><br/>
+    file: <%= link_to f, home_download_path(file_name: f) %><br/>
   <% end %>
 </div>
