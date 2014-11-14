@@ -1,3 +1,5 @@
+require 'csv'
+
 class Book < ActiveRecord::Base
   mount_uploader :cover, CoverUploader
 
@@ -26,6 +28,16 @@ class Book < ActiveRecord::Base
 
     def search_isbn( search_params, books )
       books = books.where("isbn LIKE ?", "%#{escape_like search_params[:isbn]}%")
+    end
+
+    def to_csv( books )
+      headers = %w(id title auther publisher isbn cover)  
+      contents = CSV.generate(headers: headers, write_headers: true, force_quotes: false) do |csv|
+        books.each do |row|
+          csv << [row.id, row.title, row.author, row.publisher, row.isbn, row.cover]
+        end
+      end
+      contents.encode(Encoding::SJIS)
     end
   end
 end
