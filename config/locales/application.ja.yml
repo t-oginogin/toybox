@@ -8,6 +8,7 @@ ja:
         author: 著者
         publisher: 出版社
         isbn: ISBN
+        cover: カバー
   messages:
     show: 表示
     edit: 編集

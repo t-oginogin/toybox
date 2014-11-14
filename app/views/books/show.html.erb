@@ -42,4 +42,13 @@
   </div>
 </div>
 
+<div class="row">
+  <div class="col-md-2">
+    <%= t('activerecord.attributes.book.cover') %>
+  </div>
+  <div class="col-md-2">
+    <%= image_tag(@book.cover_url) if @book.cover? %>
+  </div>
+</div>
+
 <br/>

@@ -51,6 +51,20 @@
 
   <div class="row form-group">
     <div class="col-md-2">
+      <%= f.label :cover %><br>
+    </div>
+    <div class="col-md-4">
+      <%= image_tag(@book.cover_url) if @book.cover? %>
+      <%= f.file_field :cover, class: "filestyle" %>
+      <%= f.hidden_field :cover_cache %>
+      <label>
+        <%= f.check_box :remove_cover %> Remove Cover
+      </label>
+    </div>
+  </div>
+
+  <div class="row form-group">
+    <div class="col-md-2">
       <%= f.submit class: "btn btn-primary" %>
     </div>
   </div>

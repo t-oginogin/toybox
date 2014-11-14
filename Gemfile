@@ -43,6 +43,7 @@ gem 'devise'
 gem 'momentjs-rails', '>= 2.8.1'
 gem 'bootstrap3-datetimepicker-rails', '~> 3.1.3'
 gem 'jquery-turbolinks'
+gem 'carrierwave', '~> 0.10.0'
 
 group :development, :test do
   gem 'rspec-rails', '~> 3.0.0'

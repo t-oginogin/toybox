@@ -1,4 +1,6 @@
 class Book < ActiveRecord::Base
+  mount_uploader :cover, CoverUploader
+
   class << self
     def search( search_params )
       books = Book.all
